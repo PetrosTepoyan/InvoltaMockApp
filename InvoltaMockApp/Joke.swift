@@ -11,7 +11,7 @@ struct JokeResponse: Decodable {
 	let jokes: [Joke]
 }
 
-struct Joke: Decodable {
+class Joke: Decodable {
 	let value: String
 	
 	enum CodingKeys: String, CodingKey {
