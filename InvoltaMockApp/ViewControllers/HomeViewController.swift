@@ -29,6 +29,7 @@ class HomeViewController: UIViewController {
 		imagesTableView.delegate = viewModel.imagesModel
 		viewModel.imagesModel.delegate = self
 		viewModel.imagesModel.loadImage()
+		setupBlurStackViewBackground()
 	}
 	
 	override func viewDidAppear(_ animated: Bool) {
@@ -74,6 +75,20 @@ class HomeViewController: UIViewController {
 		}
 		
 		viewModel.animator.startAnimation(afterDelay: 0.2)
+	}
+	
+	private func setupBlurStackViewBackground() {
+		let blurView = UIBlurEffect(style: .systemUltraThinMaterial)
+		let blurLayer = UIVisualEffectView(effect: blurView)
+		view.insertSubview(blurLayer, at: 1)
+		
+		blurLayer.translatesAutoresizingMaskIntoConstraints = false
+		NSLayoutConstraint.activate([
+			blurLayer.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+			blurLayer.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+			blurLayer.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+			blurLayer.topAnchor.constraint(equalTo: hStackView.topAnchor, constant: -10)
+		])
 	}
 	
 	private func prepareBlurViewForAnimation() {

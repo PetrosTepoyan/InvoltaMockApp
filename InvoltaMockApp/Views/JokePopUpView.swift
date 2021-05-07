@@ -51,6 +51,7 @@ class JokePopUpView: UIView {
 		label.font = UIFont(name: "Avenir", size: 19)!
 		label.lineBreakMode = .byWordWrapping
 		label.lineBreakStrategy = .standard
+		label.textColor = .white
 	}
 	
 	private func setupLabelConstraints() {
@@ -74,7 +75,7 @@ class JokePopUpView: UIView {
 	private func setupCloseButtonImageViewAppearance() {
 		closeButtonImageView.image = UIImage(systemName: "arrow.down.circle.fill")
 		closeButtonImageView.isUserInteractionEnabled = true
-		closeButtonImageView.tintColor = .gray
+		closeButtonImageView.tintColor = .white
 	}
 	
 	private func setupCloseButtonImageViewConstraints() {
