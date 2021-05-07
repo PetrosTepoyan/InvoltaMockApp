@@ -13,7 +13,7 @@ class HomeViewController: UIViewController {
 	@IBOutlet weak var randomJokeButton: HomeButton!
 	@IBOutlet weak var imagesTableView: UITableView!
 	@IBOutlet weak var hStackView: UIStackView!
-	private var jokePopUp: JokePopUpView!
+	private weak var jokePopUp: JokePopUpView!
 	private var blurView: UIVisualEffectView!
 	
 	@IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -30,11 +30,20 @@ class HomeViewController: UIViewController {
 		viewModel.imagesModel.delegate = self
 		viewModel.imagesModel.loadImage()
 		setupBlurStackViewBackground()
+		setupButtons()
 	}
 	
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(true)
-		setupButtons()
+		viewModel.animator.addAnimations {
+			self.randomJokeButton.transform = .identity
+			self.tableOfJokesButton.transform = .identity
+			
+			self.randomJokeButton.alpha = 1.0
+			self.tableOfJokesButton.alpha = 1.0
+		}
+		
+		viewModel.animator.startAnimation(afterDelay: 0.2)
 	}
 	
 	@IBAction func randomJokeButtonTouchUpInside(_ sender: Any) {
@@ -65,16 +74,6 @@ class HomeViewController: UIViewController {
 		tableOfJokesButton.configureLayer()
 		self.tableOfJokesButton.transform = CGAffineTransform(scaleX: 0.87, y: 0.87)
 		self.tableOfJokesButton.alpha = 0.0
-		
-		viewModel.animator.addAnimations {
-			self.randomJokeButton.transform = .identity
-			self.tableOfJokesButton.transform = .identity
-			
-			self.randomJokeButton.alpha = 1.0
-			self.tableOfJokesButton.alpha = 1.0
-		}
-		
-		viewModel.animator.startAnimation(afterDelay: 0.2)
 	}
 	
 	private func setupBlurStackViewBackground() {
