@@ -18,7 +18,9 @@ class HomeViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		imagesTableView.dataSource = imagesModel
+		imagesTableView.delegate = imagesModel
 		imagesModel.reloadData = imagesTableView.reloadData
+		imagesModel.loadImage()
 	}
 
 }

@@ -73,11 +73,11 @@
 				1552E8C6264540D1007986BD /* ImagesTableViewModel.swift */,
 				1552E8BA2645349C007986BD /* ContentClient.swift */,
 				1552E8BC26453525007986BD /* Joke.swift */,
-				1552E8BE26453595007986BD /* Content APIs.md */,
 				1552E8AC26453031007986BD /* Main.storyboard */,
 				1552E8C226453D81007986BD /* ImageTableViewCell.swift */,
 				1552E8C426453DAE007986BD /* Constants.swift */,
 				1552E8AF26453036007986BD /* Assets.xcassets */,
+				1552E8BE26453595007986BD /* Content APIs.md */,
 				1552E8B126453036007986BD /* LaunchScreen.storyboard */,
 				1552E8B426453036007986BD /* Info.plist */,
 			);
