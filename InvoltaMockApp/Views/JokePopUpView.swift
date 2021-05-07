@@ -15,6 +15,7 @@ class JokePopUpView: UIView {
 	init() {
 		super.init(frame: .zero)
 		
+		setupLayer()
 		setupLabel()
 		setupCloseButtonImageView()
 	}
@@ -23,6 +24,14 @@ class JokePopUpView: UIView {
 		fatalError("init(coder:) has not been implemented")
 	}
 	
+	func displayJoke(joke: Joke) {
+		self.label.text = joke.value
+	}
+	
+	private func setupLayer() {
+		backgroundColor = .lightGray
+	}
+ 
 	private func setupLabel() {
 		addSubview(label)
 		setupLabelConstraints()

@@ -22,6 +22,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PWL-Sc-15g">
                                         <rect key="frame" x="0.0" y="10" width="197" height="107.5"/>
                                         <state key="normal" title="Random joke"/>
+                                        <connections>
+                                            <action selector="randomJokeButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qiR-mQ-NvX"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wvA-Y0-VGg">
                                         <rect key="frame" x="197" y="10" width="197" height="107.5"/>
