@@ -13,8 +13,8 @@ protocol JokePopUpViewDelegate {
 
 class JokePopUpView: UIView {
 
-	let label = UILabel()
-	let closeButtonImageView = UIImageView()
+	private let label = UILabel()
+	private let closeButtonImageView = UIImageView()
 	
 	var delegate: JokePopUpViewDelegate?
 	
