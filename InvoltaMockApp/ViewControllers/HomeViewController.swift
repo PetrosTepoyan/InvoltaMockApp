@@ -9,8 +9,8 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-	@IBOutlet weak var tableOfJokesButton: UIButton!
-	@IBOutlet weak var randomJokeButton: UIButton!
+	@IBOutlet weak var tableOfJokesButton: HomeButton!
+	@IBOutlet weak var randomJokeButton: HomeButton!
 	@IBOutlet weak var imagesTableView: UITableView!
 	private var jokePopUp: JokePopUpView!
 	private var blurView: UIVisualEffectView!
@@ -26,6 +26,11 @@ class HomeViewController: UIViewController {
 		viewModel.imagesModel.loadImage()
 	}
 	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(true)
+		setupButtons()
+	}
+	
 	@IBAction func randomJokeButtonTouchUpInside(_ sender: Any) {
 		
 		prepareBlurViewForAnimation()
@@ -38,6 +43,26 @@ class HomeViewController: UIViewController {
 		}
 		
 		viewModel.animator.startAnimation()
+	}
+	
+	private func setupButtons() {
+		randomJokeButton.configureLayer()
+		self.randomJokeButton.transform = CGAffineTransform(scaleX: 0.87, y: 0.87)
+		self.randomJokeButton.alpha = 0.0
+		
+		tableOfJokesButton.configureLayer()
+		self.tableOfJokesButton.transform = CGAffineTransform(scaleX: 0.87, y: 0.87)
+		self.tableOfJokesButton.alpha = 0.0
+		
+		viewModel.animator.addAnimations {
+			self.randomJokeButton.transform = .identity
+			self.tableOfJokesButton.transform = .identity
+			
+			self.randomJokeButton.alpha = 1.0
+			self.tableOfJokesButton.alpha = 1.0
+		}
+		
+		viewModel.animator.startAnimation(afterDelay: 0.2)
 	}
 	
 	private func prepareBlurViewForAnimation() {

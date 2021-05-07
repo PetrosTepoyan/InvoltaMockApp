@@ -16,18 +16,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VXs-Hv-zhv">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VXs-Hv-zhv">
                                 <rect key="frame" x="10" y="734.5" width="394" height="127.5"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PWL-Sc-15g">
-                                        <rect key="frame" x="0.0" y="10" width="197" height="107.5"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PWL-Sc-15g" customClass="HomeButton" customModule="InvoltaMockApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="10" width="192" height="107.5"/>
                                         <state key="normal" title="Random joke"/>
                                         <connections>
                                             <action selector="randomJokeButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qiR-mQ-NvX"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wvA-Y0-VGg">
-                                        <rect key="frame" x="197" y="10" width="197" height="107.5"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wvA-Y0-VGg" customClass="HomeButton" customModule="InvoltaMockApp" customModuleProvider="target">
+                                        <rect key="frame" x="202" y="10" width="192" height="107.5"/>
                                         <state key="normal" title="Table of jokes"/>
                                         <connections>
                                             <segue destination="tFD-j8-rzI" kind="show" id="7zv-e4-Iyo"/>
