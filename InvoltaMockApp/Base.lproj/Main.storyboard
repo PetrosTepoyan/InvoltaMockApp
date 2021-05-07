@@ -77,6 +77,11 @@
                             <constraint firstItem="VXs-Hv-zhv" firstAttribute="top" secondItem="IcC-MV-AOr" secondAttribute="bottom" id="tiI-Eq-G9J"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imagesTableView" destination="IcC-MV-AOr" id="zd1-eM-CXQ"/>
+                        <outlet property="randomJokeButton" destination="PWL-Sc-15g" id="bdE-Sh-J1X"/>
+                        <outlet property="tableOfJokesButton" destination="wvA-Y0-VGg" id="bkg-td-lEO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -91,7 +96,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="kNz-96-eOB">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="jokeCell" id="kNz-96-eOB">
                                 <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kNz-96-eOB" id="XNX-ll-vCn">
