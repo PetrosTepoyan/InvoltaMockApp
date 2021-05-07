@@ -8,14 +8,10 @@
 import Foundation
 import UIKit
 
-protocol ImagesModelDelegate {
-	func loadingCompleted()
-}
-
 class ImagesModel: NSObject {
 	var images: [UIImage] = []
 	
-	var delegate: ImagesModelDelegate?
+	var delegate: ContentModelDelegate?
 	
 	var cache = NSCache<AnyObject, UIImage>()
 	

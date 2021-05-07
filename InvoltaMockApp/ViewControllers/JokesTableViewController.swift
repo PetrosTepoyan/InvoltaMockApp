@@ -8,7 +8,7 @@
 import UIKit
 
 class JokesTableViewController: UITableViewController,
-								JokeModelDelegate {
+								ContentModelDelegate {
 	
 	var jokeModel = JokeModel()
 	
@@ -40,7 +40,6 @@ class JokesTableViewController: UITableViewController,
 	}
 	
 	override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-		print(indexPath.row, jokeModel.jokes.count)
 		guard indexPath.row >= jokeModel.jokes.count - 5 else { return }
 		print("loading jokes...")
 		guard jokeModel.cache.object(forKey: jokeModel.jokes.count  as AnyObject) == nil else { return }

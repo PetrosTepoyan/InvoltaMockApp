@@ -7,14 +7,10 @@
 
 import Foundation
 
-protocol JokeModelDelegate {
-	func loadingCompleted()
-}
-
 class JokeModel: NSObject {
 	var jokes: [Joke] = []
 	
-	var delegate: JokeModelDelegate?
+	var delegate: ContentModelDelegate?
 	
 	var cache = NSCache<AnyObject, Joke>()
 	

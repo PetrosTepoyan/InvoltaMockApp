@@ -96,7 +96,7 @@ class HomeViewController: UIViewController {
 
 }
 
-extension HomeViewController : ImagesModelDelegate {
+extension HomeViewController : ContentModelDelegate {
 	func loadingCompleted() {
 		imagesTableView.reloadData()
 		activityIndicator.stopAnimating()
