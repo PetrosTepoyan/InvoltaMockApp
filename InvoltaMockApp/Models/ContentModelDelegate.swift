@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol ContentModelDelegate {
+protocol ContentModelDelegate: AnyObject {
 	func loadingCompleted()
 }

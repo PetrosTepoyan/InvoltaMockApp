@@ -11,7 +11,7 @@ import UIKit
 class ImagesModel: NSObject {
 	var images: [UIImage] = []
 	
-	var delegate: ContentModelDelegate?
+	weak var delegate: ContentModelDelegate?
 	
 	var cache = NSCache<AnyObject, UIImage>()
 	

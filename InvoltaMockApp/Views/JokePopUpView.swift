@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol JokePopUpViewDelegate {
+protocol JokePopUpViewDelegate: AnyObject {
 	func dismissPopUp()
 }
 
@@ -16,7 +16,7 @@ class JokePopUpView: UIView {
 	private let label = UILabel()
 	private let closeButtonImageView = UIImageView()
 	
-	var delegate: JokePopUpViewDelegate?
+	weak var delegate: JokePopUpViewDelegate?
 	
 	private var isColorful: Bool = false
 	
@@ -98,4 +98,8 @@ class JokePopUpView: UIView {
 	@objc private func closeButtonImageViewTouchUpInside(sender: UITapGestureRecognizer) {
 		delegate?.dismissPopUp()
 	}
+	
+//	deinit {
+//		print("deinited")
+//	}
 }

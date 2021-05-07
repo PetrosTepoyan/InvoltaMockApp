@@ -10,7 +10,7 @@ import Foundation
 class JokeModel: NSObject {
 	var jokes: [Joke] = []
 	
-	var delegate: ContentModelDelegate?
+	weak var delegate: ContentModelDelegate?
 	
 	var cache = NSCache<AnyObject, Joke>()
 	
