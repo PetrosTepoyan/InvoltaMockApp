@@ -23,7 +23,9 @@ class ImagesModel: NSObject {
 	
 	func loadImage() {
 		ContentClient.getImage { result in
-			DispatchQueue.main.async {
+			DispatchQueue.main.async { [weak self] in
+				guard let self = self else { return }
+				// Below, we are accessing the attributes, especially the delegate with self. Although I think we do not need [weak self], it will not harm if we have it. 
 				switch result {
 					case .success(let image):
 						self.cache.setObject(image, forKey: self.images.count as AnyObject)
