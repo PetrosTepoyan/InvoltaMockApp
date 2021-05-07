@@ -58,6 +58,8 @@ extension ImagesModel: UITableViewDataSource, UITableViewDelegate {
 	}
 	
 	func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+		
+		// Decided to do prefetching here, its simply faster to implement
 		guard indexPath.row >= images.count - 4 else { return }
 		let nextIndex = indexPath.row + 1
 		if cache.object(forKey: nextIndex as AnyObject) == nil {
@@ -67,5 +69,9 @@ extension ImagesModel: UITableViewDataSource, UITableViewDelegate {
 //			print("getting image from cache...")
 		}
 		
+	}
+	
+	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+		return tableView.frame.width + 20
 	}
 }

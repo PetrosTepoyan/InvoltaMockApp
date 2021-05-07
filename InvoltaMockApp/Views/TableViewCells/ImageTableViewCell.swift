@@ -23,6 +23,7 @@ class ImageTableViewCell: UITableViewCell {
     }
 	
 	func configure(image: UIImage) {
+		guard contentImageView.image == nil else { return }
 		contentImageView.image = image
 		contentImageView.contentMode = .scaleAspectFit
 	}
