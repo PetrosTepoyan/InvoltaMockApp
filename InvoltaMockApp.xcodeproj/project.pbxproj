@@ -75,22 +75,54 @@
 			children = (
 				1552E8A626453031007986BD /* AppDelegate.swift */,
 				1552E8A826453031007986BD /* SceneDelegate.swift */,
-				1552E8AC26453031007986BD /* Main.storyboard */,
-				1552E8AA26453031007986BD /* HomeViewController.swift */,
-				1552E8C826454D40007986BD /* JokesTableViewController.swift */,
-				1552E8C6264540D1007986BD /* ImagesModel.swift */,
-				1552E8CC26455159007986BD /* JokeModel.swift */,
 				1552E8BA2645349C007986BD /* ContentClient.swift */,
-				1552E8BC26453525007986BD /* Joke.swift */,
-				1552E8C226453D81007986BD /* ImageTableViewCell.swift */,
-				1552E8CA26454E75007986BD /* JokeTableViewCell.swift */,
 				1552E8C426453DAE007986BD /* Constants.swift */,
+				1552E8D12645583A007986BD /* Views */,
+				1552E8CE264557FB007986BD /* ViewControllers */,
+				1552E8CF26455805007986BD /* Models */,
 				1552E8AF26453036007986BD /* Assets.xcassets */,
 				1552E8BE26453595007986BD /* Content APIs.md */,
-				1552E8B126453036007986BD /* LaunchScreen.storyboard */,
 				1552E8B426453036007986BD /* Info.plist */,
+				1552E8B126453036007986BD /* LaunchScreen.storyboard */,
 			);
 			path = InvoltaMockApp;
+			sourceTree = "<group>";
+		};
+		1552E8CE264557FB007986BD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1552E8AA26453031007986BD /* HomeViewController.swift */,
+				1552E8C826454D40007986BD /* JokesTableViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		1552E8CF26455805007986BD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1552E8C6264540D1007986BD /* ImagesModel.swift */,
+				1552E8CC26455159007986BD /* JokeModel.swift */,
+				1552E8BC26453525007986BD /* Joke.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1552E8D026455817007986BD /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				1552E8C226453D81007986BD /* ImageTableViewCell.swift */,
+				1552E8CA26454E75007986BD /* JokeTableViewCell.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		1552E8D12645583A007986BD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1552E8AC26453031007986BD /* Main.storyboard */,
+				1552E8D026455817007986BD /* TableViewCells */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
