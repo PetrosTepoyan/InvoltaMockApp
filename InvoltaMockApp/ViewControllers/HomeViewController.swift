@@ -34,6 +34,9 @@ class HomeViewController: UIViewController {
 	
 	@IBAction func randomJokeButtonTouchUpInside(_ sender: Any) {
 		
+		guard viewModel.isReadyForAnimation else { return }
+		viewModel.abortCurrentAnimation()
+		
 		prepareBlurViewForAnimation()
 		prepareJokePopUpForAnimation()
 		

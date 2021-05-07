@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VXs-Hv-zhv">
-                                <rect key="frame" x="10" y="772.5" width="394" height="89.5"/>
+                                <rect key="frame" x="10" y="754.5" width="394" height="107.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PWL-Sc-15g" customClass="HomeButton" customModule="InvoltaMockApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="10" width="192" height="69.5"/>
+                                        <rect key="frame" x="0.0" y="10" width="192" height="87.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         <state key="normal" title="Random joke"/>
                                         <connections>
@@ -28,7 +28,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wvA-Y0-VGg" customClass="HomeButton" customModule="InvoltaMockApp" customModuleProvider="target">
-                                        <rect key="frame" x="202" y="10" width="192" height="69.5"/>
+                                        <rect key="frame" x="202" y="10" width="192" height="87.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         <state key="normal" title="Table of jokes"/>
                                         <connections>
@@ -82,7 +82,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VXs-Hv-zhv" secondAttribute="trailing" constant="10" id="d93-e3-1RM"/>
                             <constraint firstItem="IcC-MV-AOr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="f0b-bx-pWA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IcC-MV-AOr" secondAttribute="trailing" id="laI-Yl-DgH"/>
-                            <constraint firstItem="VXs-Hv-zhv" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="sQb-0D-dZH"/>
+                            <constraint firstItem="VXs-Hv-zhv" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.12" id="sQb-0D-dZH"/>
                         </constraints>
                     </view>
                     <connections>

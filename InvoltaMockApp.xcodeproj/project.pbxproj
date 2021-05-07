@@ -106,10 +106,10 @@
 		1552E8CF26455805007986BD /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1552E8D426456539007986BD /* HomeViewModel.swift */,
 				1552E8C6264540D1007986BD /* ImagesModel.swift */,
 				1552E8CC26455159007986BD /* JokeModel.swift */,
 				1552E8BC26453525007986BD /* Joke.swift */,
-				1552E8D426456539007986BD /* HomeViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";

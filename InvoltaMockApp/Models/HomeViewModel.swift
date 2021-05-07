@@ -16,6 +16,18 @@ struct HomeViewModel {
 	
 	let imagesModel = ImagesModel.shared
 	
+	var isReadyForAnimation: Bool {
+		return animator.state == .inactive ||
+				animator.fractionComplete > 0.85
+	}
+	
+	func abortCurrentAnimation() {
+		if animator.isRunning {
+			animator.stopAnimation(true)
+			animator.finishAnimation(at: .current)
+		}
+	}
+	
 	init() {
 		animator = UIViewPropertyAnimator(duration: animationDuration, dampingRatio: 0.83, animations: nil)
 	}
