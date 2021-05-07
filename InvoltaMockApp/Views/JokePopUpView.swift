@@ -18,6 +18,8 @@ class JokePopUpView: UIView {
 	
 	var delegate: JokePopUpViewDelegate?
 	
+	private var isColorful: Bool = false
+	
 	init() {
 		super.init(frame: .zero)
 		
@@ -35,7 +37,7 @@ class JokePopUpView: UIView {
 	}
 	
 	private func setupLayer() {
-		backgroundColor = UIColor(named: "BlueBackground")
+		backgroundColor = isColorful ? UIColor(named: "BlueBackground") : .white
 		layer.cornerRadius = 20
 	}
  
@@ -51,7 +53,7 @@ class JokePopUpView: UIView {
 		label.font = UIFont(name: "Avenir", size: 19)!
 		label.lineBreakMode = .byWordWrapping
 		label.lineBreakStrategy = .standard
-		label.textColor = .white
+		label.textColor = isColorful ? .white : .black
 	}
 	
 	private func setupLabelConstraints() {
@@ -75,7 +77,7 @@ class JokePopUpView: UIView {
 	private func setupCloseButtonImageViewAppearance() {
 		closeButtonImageView.image = UIImage(systemName: "arrow.down.circle.fill")
 		closeButtonImageView.isUserInteractionEnabled = true
-		closeButtonImageView.tintColor = .white
+		closeButtonImageView.tintColor = isColorful ? .white : .gray
 	}
 	
 	private func setupCloseButtonImageViewConstraints() {
