@@ -35,7 +35,7 @@ class JokePopUpView: UIView {
 	}
 	
 	private func setupLayer() {
-		backgroundColor = .lightGray
+		backgroundColor = UIColor(named: "BlueBackground")
 	}
  
 	private func setupLabel() {

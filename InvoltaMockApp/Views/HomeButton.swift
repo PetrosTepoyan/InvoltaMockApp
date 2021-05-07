@@ -11,7 +11,7 @@ class HomeButton: UIButton {
 	
 	func configureLayer() {
 		tintColor = .white
-		backgroundColor = .darkGray
+		backgroundColor = UIColor(named: "BlueBackground")
 		layer.cornerRadius = 20
 	}
 	

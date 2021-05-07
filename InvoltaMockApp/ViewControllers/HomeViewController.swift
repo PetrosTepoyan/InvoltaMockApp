@@ -12,6 +12,7 @@ class HomeViewController: UIViewController {
 	@IBOutlet weak var tableOfJokesButton: HomeButton!
 	@IBOutlet weak var randomJokeButton: HomeButton!
 	@IBOutlet weak var imagesTableView: UITableView!
+	@IBOutlet weak var hStackView: UIStackView!
 	private var jokePopUp: JokePopUpView!
 	private var blurView: UIVisualEffectView!
 	
@@ -46,6 +47,9 @@ class HomeViewController: UIViewController {
 	}
 	
 	private func setupButtons() {
+		
+		view.bringSubviewToFront(hStackView)
+		
 		randomJokeButton.configureLayer()
 		self.randomJokeButton.transform = CGAffineTransform(scaleX: 0.87, y: 0.87)
 		self.randomJokeButton.alpha = 0.0
