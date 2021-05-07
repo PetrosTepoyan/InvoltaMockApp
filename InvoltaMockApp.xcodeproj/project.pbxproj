@@ -13,6 +13,8 @@
 		1552E8AE26453031007986BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1552E8AC26453031007986BD /* Main.storyboard */; };
 		1552E8B026453036007986BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1552E8AF26453036007986BD /* Assets.xcassets */; };
 		1552E8B326453036007986BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1552E8B126453036007986BD /* LaunchScreen.storyboard */; };
+		1552E8BB2645349C007986BD /* ContentClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1552E8BA2645349C007986BD /* ContentClient.swift */; };
+		1552E8BD26453525007986BD /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1552E8BC26453525007986BD /* Joke.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,9 @@
 		1552E8AF26453036007986BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1552E8B226453036007986BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1552E8B426453036007986BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1552E8BA2645349C007986BD /* ContentClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentClient.swift; sourceTree = "<group>"; };
+		1552E8BC26453525007986BD /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
+		1552E8BE26453595007986BD /* Content APIs.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Content APIs.md"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +64,9 @@
 				1552E8A626453031007986BD /* AppDelegate.swift */,
 				1552E8A826453031007986BD /* SceneDelegate.swift */,
 				1552E8AA26453031007986BD /* ViewController.swift */,
+				1552E8BA2645349C007986BD /* ContentClient.swift */,
+				1552E8BC26453525007986BD /* Joke.swift */,
+				1552E8BE26453595007986BD /* Content APIs.md */,
 				1552E8AC26453031007986BD /* Main.storyboard */,
 				1552E8AF26453036007986BD /* Assets.xcassets */,
 				1552E8B126453036007986BD /* LaunchScreen.storyboard */,
@@ -137,6 +145,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1552E8BB2645349C007986BD /* ContentClient.swift in Sources */,
+				1552E8BD26453525007986BD /* Joke.swift in Sources */,
 				1552E8AB26453031007986BD /* ViewController.swift in Sources */,
 				1552E8A726453031007986BD /* AppDelegate.swift in Sources */,
 				1552E8A926453031007986BD /* SceneDelegate.swift in Sources */,
