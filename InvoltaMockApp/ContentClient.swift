@@ -20,11 +20,13 @@ final class ContentClient {
 	private let joke_url = URL(string: "https://v2.jokeapi.dev/joke/Any?type=single&amount=10")!
 	private let image_url = URL(string: "https://picsum.photos/500")!
 	
+	private static var jokeDataTask: URLSessionDataTask?
+	
 	static func getJokes(completionHandler: @escaping (Result<[Joke], ContentError>) -> Void ) {
-		var request = URLRequest(url: shared.joke_url)
-		request.httpMethod = "GET"
 		
-		session.dataTask(with: request) { data, response, error in
+		guard jokeDataTask == nil || jokeDataTask?.state == .completed else { return }
+		
+		jokeDataTask = session.dataTask(with: shared.joke_url) { data, response, error in
 			guard error == nil else {
 				completionHandler(.failure(.sessionError))
 				return
@@ -43,7 +45,10 @@ final class ContentClient {
 			completionHandler(.success(jokeResponse.jokes))
 			
 			
-		}.resume()
+		}
+		
+		jokeDataTask!.resume()
+		
 	}
 	
 	static func getImage(completionHandler: @escaping (Result<UIImage, ContentError>) -> Void ) {
