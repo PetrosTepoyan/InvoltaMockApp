@@ -18,6 +18,8 @@ class JokeModel: NSObject {
 	
 	var cache = NSCache<AnyObject, Joke>()
 	
+	static let shared = JokeModel()
+	
 	func loadBatchJokes() {
 		ContentClient.getJokes { result in
 			DispatchQueue.main.async {

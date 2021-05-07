@@ -19,6 +19,8 @@ class ImagesModel: NSObject {
 	
 	var cache = NSCache<AnyObject, UIImage>()
 	
+	static let shared = ImagesModel()
+	
 	override init() {
 		super.init()
 	}
