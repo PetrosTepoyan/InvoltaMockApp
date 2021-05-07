@@ -13,15 +13,21 @@ class HomeViewController: UIViewController {
 	@IBOutlet weak var randomJokeButton: UIButton!
 	@IBOutlet weak var imagesTableView: UITableView!
 	
-	let imagesModel = ImagesTableViewModel()
+	let imagesModel = ImagesModel()
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		imagesTableView.dataSource = imagesModel
 		imagesTableView.delegate = imagesModel
-		imagesModel.reloadData = imagesTableView.reloadData
+		imagesModel.delegate = self
 		imagesModel.loadImage()
 	}
 
+}
+
+extension HomeViewController : ImagesModelDelegate {
+	func loadingCompleted() {
+		imagesTableView.reloadData()
+	}
 }
 

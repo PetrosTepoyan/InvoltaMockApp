@@ -1,5 +1,5 @@
 //
-//  ImagesTableViewModel.swift
+//  ImagesModel.swift
 //  InvoltaMockApp
 //
 //  Created by Петрос Тепоян on 5/7/21.
@@ -8,12 +8,16 @@
 import Foundation
 import UIKit
 
-class ImagesTableViewModel: NSObject {
-	var images: [UIImage] = []
+protocol ImagesModelDelegate {
+	func loadingCompleted()
+}
 
-	var reloadData: (() -> ())!
+class ImagesModel: NSObject {
+	var images: [UIImage] = []
 	
-	var imageCache = NSCache<AnyObject, UIImage>()
+	var delegate: ImagesModelDelegate?
+	
+	var cache = NSCache<AnyObject, UIImage>()
 	
 	override init() {
 		super.init()
@@ -24,9 +28,9 @@ class ImagesTableViewModel: NSObject {
 			DispatchQueue.main.async {
 				switch result {
 					case .success(let image):
-						self.imageCache.setObject(image, forKey: self.images.count as AnyObject)
+						self.cache.setObject(image, forKey: self.images.count as AnyObject)
 						self.images.append(image)
-						self.reloadData()
+						self.delegate?.loadingCompleted()
 					case .failure(let error):
 						debugPrint(error)
 				}
@@ -35,7 +39,7 @@ class ImagesTableViewModel: NSObject {
 	}
 }
 
-extension ImagesTableViewModel: UITableViewDataSource, UITableViewDelegate {
+extension ImagesModel: UITableViewDataSource, UITableViewDelegate {
 	func numberOfSections(in tableView: UITableView) -> Int {
 		return 1
 	}
@@ -54,7 +58,7 @@ extension ImagesTableViewModel: UITableViewDataSource, UITableViewDelegate {
 	func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
 		guard indexPath.row >= images.count - 4 else { return }
 		let nextIndex = indexPath.row + 1
-		if imageCache.object(forKey: nextIndex as AnyObject) == nil {
+		if cache.object(forKey: nextIndex as AnyObject) == nil {
 //			print("loading new image...")
 			loadImage()
 		} else{
