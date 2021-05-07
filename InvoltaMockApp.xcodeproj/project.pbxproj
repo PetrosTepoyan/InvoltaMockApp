@@ -21,6 +21,7 @@
 		1552E8C926454D40007986BD /* JokesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1552E8C826454D40007986BD /* JokesTableViewController.swift */; };
 		1552E8CB26454E75007986BD /* JokeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1552E8CA26454E75007986BD /* JokeTableViewCell.swift */; };
 		1552E8CD26455159007986BD /* JokeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1552E8CC26455159007986BD /* JokeModel.swift */; };
+		1552E8D326455937007986BD /* JokePopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1552E8D226455937007986BD /* JokePopUpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		1552E8C826454D40007986BD /* JokesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesTableViewController.swift; sourceTree = "<group>"; };
 		1552E8CA26454E75007986BD /* JokeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeTableViewCell.swift; sourceTree = "<group>"; };
 		1552E8CC26455159007986BD /* JokeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeModel.swift; sourceTree = "<group>"; };
+		1552E8D226455937007986BD /* JokePopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokePopUpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				1552E8AC26453031007986BD /* Main.storyboard */,
+				1552E8D226455937007986BD /* JokePopUpView.swift */,
 				1552E8D026455817007986BD /* TableViewCells */,
 			);
 			path = Views;
@@ -197,6 +200,7 @@
 			files = (
 				1552E8C326453D81007986BD /* ImageTableViewCell.swift in Sources */,
 				1552E8BB2645349C007986BD /* ContentClient.swift in Sources */,
+				1552E8D326455937007986BD /* JokePopUpView.swift in Sources */,
 				1552E8C926454D40007986BD /* JokesTableViewController.swift in Sources */,
 				1552E8CD26455159007986BD /* JokeModel.swift in Sources */,
 				1552E8BD26453525007986BD /* Joke.swift in Sources */,

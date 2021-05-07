@@ -14,7 +14,7 @@ final class ContentClient {
 		case sessionError, emptyData, decodingError
 	}
 	
-	static let session = URLSession.shared
+	private static let session = URLSession.shared
 	static let shared = ContentClient()
 	
 	private let joke_url = URL(string: "https://v2.jokeapi.dev/joke/Any?type=single&amount=10")!
