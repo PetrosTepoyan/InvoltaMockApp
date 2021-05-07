@@ -12,5 +12,9 @@ struct JokeResponse: Decodable {
 }
 
 struct Joke: Decodable {
-	let joke: String
+	let value: String
+	
+	enum CodingKeys: String, CodingKey {
+		case value = "joke"
+	}
 }

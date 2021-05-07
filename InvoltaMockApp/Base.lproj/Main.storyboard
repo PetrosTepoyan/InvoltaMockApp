@@ -90,22 +90,39 @@
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="78.348214285714278"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Jokes Table View Controller-->
         <scene sceneID="VN6-wK-dKT">
             <objects>
-                <tableViewController id="tFD-j8-rzI" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="fqE-8e-cza">
+                <tableViewController id="tFD-j8-rzI" customClass="JokesTableViewController" customModule="InvoltaMockApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="fqE-8e-cza">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="jokeCell" id="kNz-96-eOB">
-                                <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="jokeCell" rowHeight="150" id="kNz-96-eOB" customClass="JokeTableViewCell" customModule="InvoltaMockApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kNz-96-eOB" id="XNX-ll-vCn">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="awm-Bb-3zc">
+                                            <rect key="frame" x="20" y="11" width="374" height="128"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="awm-Bb-3zc" firstAttribute="leading" secondItem="XNX-ll-vCn" secondAttribute="leadingMargin" id="FKZ-jZ-RUm"/>
+                                        <constraint firstItem="awm-Bb-3zc" firstAttribute="trailing" secondItem="XNX-ll-vCn" secondAttribute="trailingMargin" id="aIb-HB-nJp"/>
+                                        <constraint firstItem="awm-Bb-3zc" firstAttribute="bottom" secondItem="XNX-ll-vCn" secondAttribute="bottomMargin" id="pot-m0-26h"/>
+                                        <constraint firstItem="awm-Bb-3zc" firstAttribute="top" secondItem="XNX-ll-vCn" secondAttribute="topMargin" id="vOJ-Vj-eKB"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="jokeLabel" destination="awm-Bb-3zc" id="CgB-0i-K1t"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -117,7 +134,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CCg-5b-hfW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="917" y="78"/>
+            <point key="canvasLocation" x="915.94202898550736" y="77.678571428571431"/>
         </scene>
     </scenes>
     <resources>

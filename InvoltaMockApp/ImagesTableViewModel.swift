@@ -55,10 +55,10 @@ extension ImagesTableViewModel: UITableViewDataSource, UITableViewDelegate {
 		guard indexPath.row >= images.count - 4 else { return }
 		let nextIndex = indexPath.row + 1
 		if imageCache.object(forKey: nextIndex as AnyObject) == nil {
-			print("loading new image...")
+//			print("loading new image...")
 			loadImage()
 		} else{
-			print("getting image from cache...")
+//			print("getting image from cache...")
 		}
 		
 	}
