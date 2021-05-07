@@ -16,33 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VXs-Hv-zhv">
-                                <rect key="frame" x="10" y="754.5" width="394" height="107.5"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PWL-Sc-15g" customClass="HomeButton" customModule="InvoltaMockApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="10" width="192" height="87.5"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                        <state key="normal" title="Random joke"/>
-                                        <connections>
-                                            <action selector="randomJokeButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qiR-mQ-NvX"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wvA-Y0-VGg" customClass="HomeButton" customModule="InvoltaMockApp" customModuleProvider="target">
-                                        <rect key="frame" x="202" y="10" width="192" height="87.5"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                        <state key="normal" title="Table of jokes"/>
-                                        <connections>
-                                            <segue destination="tFD-j8-rzI" kind="show" id="7zv-e4-Iyo"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="wvA-Y0-VGg" secondAttribute="bottom" constant="10" id="ONH-1V-U4G"/>
-                                    <constraint firstItem="wvA-Y0-VGg" firstAttribute="top" secondItem="VXs-Hv-zhv" secondAttribute="top" constant="10" id="Te7-ia-lU5"/>
-                                    <constraint firstAttribute="bottom" secondItem="PWL-Sc-15g" secondAttribute="bottom" constant="10" id="asX-ej-YCU"/>
-                                    <constraint firstItem="PWL-Sc-15g" firstAttribute="top" secondItem="VXs-Hv-zhv" secondAttribute="top" constant="10" id="dMe-P7-FTU"/>
-                                </constraints>
-                            </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IcC-MV-AOr">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -71,12 +44,45 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VXs-Hv-zhv">
+                                <rect key="frame" x="10" y="754.5" width="394" height="107.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PWL-Sc-15g" customClass="HomeButton" customModule="InvoltaMockApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="10" width="192" height="87.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <state key="normal" title="Random joke"/>
+                                        <connections>
+                                            <action selector="randomJokeButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qiR-mQ-NvX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wvA-Y0-VGg" customClass="HomeButton" customModule="InvoltaMockApp" customModuleProvider="target">
+                                        <rect key="frame" x="202" y="10" width="192" height="87.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <state key="normal" title="Table of jokes"/>
+                                        <connections>
+                                            <segue destination="tFD-j8-rzI" kind="show" id="7zv-e4-Iyo"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="wvA-Y0-VGg" secondAttribute="bottom" constant="10" id="ONH-1V-U4G"/>
+                                    <constraint firstItem="wvA-Y0-VGg" firstAttribute="top" secondItem="VXs-Hv-zhv" secondAttribute="top" constant="10" id="Te7-ia-lU5"/>
+                                    <constraint firstAttribute="bottom" secondItem="PWL-Sc-15g" secondAttribute="bottom" constant="10" id="asX-ej-YCU"/>
+                                    <constraint firstItem="PWL-Sc-15g" firstAttribute="top" secondItem="VXs-Hv-zhv" secondAttribute="top" constant="10" id="dMe-P7-FTU"/>
+                                </constraints>
+                            </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="hIN-Mc-AgY">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" systemColor="systemBlueColor"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="IcC-MV-AOr" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="0UC-dZ-yLV"/>
+                            <constraint firstItem="hIN-Mc-AgY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Ww-vT-sdL"/>
                             <constraint firstItem="VXs-Hv-zhv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="AYU-CD-2Ry"/>
+                            <constraint firstItem="hIN-Mc-AgY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ags-eO-D1D"/>
                             <constraint firstItem="IcC-MV-AOr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="HPO-mD-uS6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VXs-Hv-zhv" secondAttribute="bottom" id="Tvp-Fj-5DC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VXs-Hv-zhv" secondAttribute="trailing" constant="10" id="d93-e3-1RM"/>
@@ -86,6 +92,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="hIN-Mc-AgY" id="dOV-yH-tXl"/>
                         <outlet property="hStackView" destination="VXs-Hv-zhv" id="Yjz-dg-icY"/>
                         <outlet property="imagesTableView" destination="IcC-MV-AOr" id="zd1-eM-CXQ"/>
                         <outlet property="randomJokeButton" destination="PWL-Sc-15g" id="bdE-Sh-J1X"/>
@@ -146,6 +153,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

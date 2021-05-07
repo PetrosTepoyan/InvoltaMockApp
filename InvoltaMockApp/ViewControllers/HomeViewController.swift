@@ -16,10 +16,14 @@ class HomeViewController: UIViewController {
 	private var jokePopUp: JokePopUpView!
 	private var blurView: UIVisualEffectView!
 	
+	@IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+	
 	let viewModel = HomeViewModel()
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		
+		activityIndicator.startAnimating()
 		
 		imagesTableView.dataSource = viewModel.imagesModel
 		imagesTableView.delegate = viewModel.imagesModel
@@ -95,6 +99,7 @@ class HomeViewController: UIViewController {
 extension HomeViewController : ImagesModelDelegate {
 	func loadingCompleted() {
 		imagesTableView.reloadData()
+		activityIndicator.stopAnimating()
 	}
 }
 
