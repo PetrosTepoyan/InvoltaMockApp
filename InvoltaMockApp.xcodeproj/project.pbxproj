@@ -17,9 +17,10 @@
 		1552E8BD26453525007986BD /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1552E8BC26453525007986BD /* Joke.swift */; };
 		1552E8C326453D81007986BD /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1552E8C226453D81007986BD /* ImageTableViewCell.swift */; };
 		1552E8C526453DAE007986BD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1552E8C426453DAE007986BD /* Constants.swift */; };
-		1552E8C7264540D1007986BD /* ImagesTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1552E8C6264540D1007986BD /* ImagesTableViewModel.swift */; };
+		1552E8C7264540D1007986BD /* ImagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1552E8C6264540D1007986BD /* ImagesModel.swift */; };
 		1552E8C926454D40007986BD /* JokesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1552E8C826454D40007986BD /* JokesTableViewController.swift */; };
 		1552E8CB26454E75007986BD /* JokeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1552E8CA26454E75007986BD /* JokeTableViewCell.swift */; };
+		1552E8CD26455159007986BD /* JokeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1552E8CC26455159007986BD /* JokeModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,9 +37,10 @@
 		1552E8BE26453595007986BD /* Content APIs.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Content APIs.md"; sourceTree = "<group>"; };
 		1552E8C226453D81007986BD /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
 		1552E8C426453DAE007986BD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		1552E8C6264540D1007986BD /* ImagesTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesTableViewModel.swift; sourceTree = "<group>"; };
+		1552E8C6264540D1007986BD /* ImagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesModel.swift; sourceTree = "<group>"; };
 		1552E8C826454D40007986BD /* JokesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesTableViewController.swift; sourceTree = "<group>"; };
 		1552E8CA26454E75007986BD /* JokeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeTableViewCell.swift; sourceTree = "<group>"; };
+		1552E8CC26455159007986BD /* JokeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,8 +77,9 @@
 				1552E8A826453031007986BD /* SceneDelegate.swift */,
 				1552E8AC26453031007986BD /* Main.storyboard */,
 				1552E8AA26453031007986BD /* HomeViewController.swift */,
-				1552E8C6264540D1007986BD /* ImagesTableViewModel.swift */,
+				1552E8C6264540D1007986BD /* ImagesModel.swift */,
 				1552E8C826454D40007986BD /* JokesTableViewController.swift */,
+				1552E8CC26455159007986BD /* JokeModel.swift */,
 				1552E8BA2645349C007986BD /* ContentClient.swift */,
 				1552E8BC26453525007986BD /* Joke.swift */,
 				1552E8C226453D81007986BD /* ImageTableViewCell.swift */,
@@ -163,8 +166,9 @@
 				1552E8C326453D81007986BD /* ImageTableViewCell.swift in Sources */,
 				1552E8BB2645349C007986BD /* ContentClient.swift in Sources */,
 				1552E8C926454D40007986BD /* JokesTableViewController.swift in Sources */,
+				1552E8CD26455159007986BD /* JokeModel.swift in Sources */,
 				1552E8BD26453525007986BD /* Joke.swift in Sources */,
-				1552E8C7264540D1007986BD /* ImagesTableViewModel.swift in Sources */,
+				1552E8C7264540D1007986BD /* ImagesModel.swift in Sources */,
 				1552E8AB26453031007986BD /* HomeViewController.swift in Sources */,
 				1552E8CB26454E75007986BD /* JokeTableViewCell.swift in Sources */,
 				1552E8A726453031007986BD /* AppDelegate.swift in Sources */,
