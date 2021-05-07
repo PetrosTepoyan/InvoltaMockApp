@@ -36,6 +36,7 @@ class JokePopUpView: UIView {
 	
 	private func setupLayer() {
 		backgroundColor = UIColor(named: "BlueBackground")
+		layer.cornerRadius = 20
 	}
  
 	private func setupLabel() {
