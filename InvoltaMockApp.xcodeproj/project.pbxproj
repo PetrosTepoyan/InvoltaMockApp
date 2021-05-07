@@ -22,6 +22,7 @@
 		1552E8CB26454E75007986BD /* JokeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1552E8CA26454E75007986BD /* JokeTableViewCell.swift */; };
 		1552E8CD26455159007986BD /* JokeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1552E8CC26455159007986BD /* JokeModel.swift */; };
 		1552E8D326455937007986BD /* JokePopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1552E8D226455937007986BD /* JokePopUpView.swift */; };
+		1552E8D526456539007986BD /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1552E8D426456539007986BD /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		1552E8CA26454E75007986BD /* JokeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeTableViewCell.swift; sourceTree = "<group>"; };
 		1552E8CC26455159007986BD /* JokeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeModel.swift; sourceTree = "<group>"; };
 		1552E8D226455937007986BD /* JokePopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokePopUpView.swift; sourceTree = "<group>"; };
+		1552E8D426456539007986BD /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				1552E8C6264540D1007986BD /* ImagesModel.swift */,
 				1552E8CC26455159007986BD /* JokeModel.swift */,
 				1552E8BC26453525007986BD /* Joke.swift */,
+				1552E8D426456539007986BD /* HomeViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				1552E8BD26453525007986BD /* Joke.swift in Sources */,
 				1552E8C7264540D1007986BD /* ImagesModel.swift in Sources */,
 				1552E8AB26453031007986BD /* HomeViewController.swift in Sources */,
+				1552E8D526456539007986BD /* HomeViewModel.swift in Sources */,
 				1552E8CB26454E75007986BD /* JokeTableViewCell.swift in Sources */,
 				1552E8A726453031007986BD /* AppDelegate.swift in Sources */,
 				1552E8A926453031007986BD /* SceneDelegate.swift in Sources */,
